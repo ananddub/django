@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        .profile-card {
+            background-color: #f0f4f8;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .profile-card .card-header {
+            background-color: #4c51bf;
+            color: #ffffff;
+        }
+
+        .profile-card .card-body {
+            padding: 1.5rem;
+        }
+
+        .profile-card .profile-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-card .profile-info p:first-child {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <div class="max-w-md mx-auto">
+            <div class="profile-card">
+                <div class="card-header p-4">
+                    <h1 class="text-3xl font-bold">Welcome to Your Profile</h1>
+                </div>
+                <div class="card-body">
+                    <div class="profile-info grid grid-cols-1 gap-y-4">
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Roll:</p>
+                            <p>{{ student.roll }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Name:</p>
+                            <p>{{ student.name }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Class:</p>
+                            <p>{{ student.student_class }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Section:</p>
+                            <p>{{ student.section }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Admission Number:</p>
+                            <p>{{ student.admission_number }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Phone:</p>
+                            <p>{{ student.phone }}</p>
+                        </div>
+                        <div class="text-lg grid grid-cols-2 gap-4">
+                            <p>Address:</p>
+                            <p>{{ student.address }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
